@@ -37,7 +37,7 @@ function Index() {
         <img src={heroImage} alt="Barista preparing coffee at Toco Speciality" width={1920} height={1200} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-primary/45" />
         <header className="relative z-20 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-primary-foreground/30 px-5 py-4 sm:px-8 lg:px-12">
-          <a href="#top" className="min-w-0 font-display text-2xl uppercase leading-none">Toco Speciality</a>
+          <a href="#top" className="flex min-w-0 items-center gap-3"><img src={logoLight.url} alt="Toco Speciality logo" width={749} height={749} className="h-11 w-11 shrink-0 sm:h-12 sm:w-12" /><span className="font-display text-xl uppercase leading-none sm:text-2xl">Toco Speciality</span></a>
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
             {navItems.map((item) => <a key={item.label} href={item.href} className="text-sm font-semibold transition-opacity hover:opacity-60">{item.label}</a>)}
             <Button asChild variant="editorial" className="border-primary-foreground bg-primary-foreground text-primary hover:bg-primary-foreground/85"><a href="#visit">Find us</a></Button>
@@ -45,7 +45,7 @@ function Index() {
           <Sheet>
             <SheetTrigger asChild><Button size="icon" variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/15 hover:text-primary-foreground lg:hidden" aria-label="Open menu"><Menu /></Button></SheetTrigger>
             <SheetContent className="w-full border-0 bg-background p-8 sm:max-w-md">
-              <SheetTitle className="font-display text-3xl uppercase">Toco Speciality</SheetTitle>
+              <SheetTitle className="flex items-center gap-4 font-display text-3xl uppercase"><img src={logoDark.url} alt="Toco Speciality logo" width={749} height={749} className="h-12 w-12" />Toco Speciality</SheetTitle>
               <nav className="mt-16 flex flex-col" aria-label="Mobile navigation">
                 {navItems.map((item, index) => <SheetClose asChild key={item.label}><a href={item.href} className="display-type border-t border-border py-5 text-4xl">0{index + 1} / {item.label}</a></SheetClose>)}
               </nav>
@@ -137,7 +137,7 @@ function Index() {
 
       <footer className="bg-primary px-5 py-12 text-primary-foreground sm:px-8 lg:px-12">
         <div className="grid gap-10 border-b border-primary-foreground/25 pb-12 md:grid-cols-[1fr_auto] md:items-end">
-          <div className="flex items-center gap-5"><img src={logoAsset.url} alt="Toco Speciality logo" width={750} height={750} loading="lazy" className="h-20 w-20 object-cover mix-blend-screen" /><p className="display-type text-4xl sm:text-6xl">Toco Speciality</p></div>
+          <div className="flex items-center gap-5"><img src={logoLight.url} alt="Toco Speciality logo" width={749} height={749} loading="lazy" className="h-24 w-24 sm:h-28 sm:w-28" /><p className="display-type text-4xl sm:text-6xl">Toco Speciality</p></div>
           <a href="#top" className="flex items-center gap-2 text-sm font-bold uppercase">Back to top <ArrowDown className="rotate-180" /></a>
         </div>
         <div className="flex flex-col gap-2 pt-6 text-xs uppercase text-primary-foreground/60 sm:flex-row sm:justify-between"><span>© 2026 Toco Speciality</span><span>COFFEE · FOOD · ADDIS ABABA</span></div>
