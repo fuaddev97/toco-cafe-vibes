@@ -1,5 +1,7 @@
 # Toco Cafe Experience
 
+This is a standard React application built with Vite. It uses JavaScript (`.js` and `.jsx`) and plain CSS only—there is no TypeScript, Tailwind, Sass, or other CSS framework.
+
 Build a modern cafe website for a cafe called "Toco Speciality" inspired by the visual design and layout of https://cocksandcows.dk/.
 
 I've attached the logo image of the cafe for your usage.
