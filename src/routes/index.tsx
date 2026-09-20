@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 
 const navItems = [
   { label: "Menu", href: "#menu" },
-  { label: "Our story", href: "#story" },
+  { label: "About TOCO", href: "#story" },
   { label: "Journal", href: "#journal" },
   { label: "Visit", href: "#visit" },
 ];
@@ -69,7 +69,7 @@ function Index() {
           <h2 className="display-type max-w-4xl text-[clamp(3.4rem,8vw,8rem)]">A quiet ritual.<br />A bold cup.</h2>
         </div>
         <div className="lg:max-w-xl lg:justify-self-end">
-          <p className="text-xl leading-relaxed sm:text-2xl">Toco is an everyday meeting place shaped by origin-led coffee, seasonal plates, and warm Saudi hospitality.</p>
+           <p className="text-xl leading-relaxed sm:text-2xl">Toco is an everyday meeting place shaped by origin-led coffee, seasonal plates, and warm Ethiopian hospitality.</p>
           <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">We source with care, roast for sweetness, and keep the menu honest. Nothing overworked. Everything worth returning for.</p>
           <Button asChild variant="editorialOutline" size="lg" className="mt-9"><a href="#menu">Explore the menu <ArrowUpRight /></a></Button>
         </div>
