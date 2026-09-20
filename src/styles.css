@@ -42,6 +42,10 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-cream: var(--cream);
+  --color-light: var(--light);
+  --color-sand: var(--sand);
+  --color-coffee: var(--coffee);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -65,20 +69,24 @@
 
 :root {
   --radius: 0.125rem;
-  --background: oklch(0.845 0.018 78.2);
-  --foreground: oklch(0.302 0.004 85.9);
-  --card: oklch(0.885 0.015 78.2);
-  --card-foreground: oklch(0.302 0.004 85.9);
-  --popover: oklch(0.885 0.015 78.2);
-  --popover-foreground: oklch(0.302 0.004 85.9);
-  --primary: oklch(0.302 0.004 85.9);
-  --primary-foreground: oklch(0.845 0.018 78.2);
-  --secondary: oklch(0.755 0.032 68);
-  --secondary-foreground: oklch(0.302 0.004 85.9);
-  --muted: oklch(0.8 0.018 78.2);
-  --muted-foreground: oklch(0.46 0.012 72);
-  --accent: oklch(0.655 0.11 50);
-  --accent-foreground: oklch(0.98 0.005 78);
+  --background: oklch(0.956 0.0115 84.58);
+  --foreground: oklch(0.3124 0.0035 106.6);
+  --card: oklch(0.956 0.0115 84.58);
+  --card-foreground: oklch(0.3124 0.0035 106.6);
+  --popover: oklch(0.956 0.0115 84.58);
+  --popover-foreground: oklch(0.3124 0.0035 106.6);
+  --primary: oklch(0.3124 0.0035 106.6);
+  --primary-foreground: oklch(0.956 0.0115 84.58);
+  --secondary: oklch(0.907 0.0212 79.09);
+  --secondary-foreground: oklch(0.3124 0.0035 106.6);
+  --muted: oklch(0.8546 0.0227 80.68);
+  --muted-foreground: oklch(0.467 0.0403 60.87);
+  --accent: oklch(0.6272 0.0935 42.63);
+  --accent-foreground: oklch(0.956 0.0115 84.58);
+  --cream: oklch(0.8546 0.0227 80.68);
+  --light: oklch(0.956 0.0115 84.58);
+  --sand: oklch(0.907 0.0212 79.09);
+  --coffee: oklch(0.467 0.0403 60.87);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.302 0.004 85.9 / 28%);
@@ -174,6 +182,15 @@
   &:hover img {
     transform: scale(1.035);
   }
+}
+
+@utility hero-overlay {
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklch, var(--primary) 45%, transparent) 0%,
+    color-mix(in oklch, var(--primary) 15%, transparent) 55%,
+    color-mix(in oklch, var(--primary) 5%, transparent) 100%
+  );
 }
 
 @utility reveal-up {
