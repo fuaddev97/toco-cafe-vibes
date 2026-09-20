@@ -35,12 +35,12 @@ function Index() {
     <main className="overflow-hidden bg-background text-foreground">
       <section className="relative min-h-[92svh] bg-primary text-primary-foreground">
         <img src={heroImage} alt="Barista preparing coffee at Toco Speciality" width={1920} height={1200} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-primary/45" />
+        <div className="hero-overlay absolute inset-0" />
         <header className="relative z-20 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-primary-foreground/30 px-5 py-4 sm:px-8 lg:px-12">
           <a href="#top" className="flex min-w-0 items-center gap-3"><img src={logoLight.url} alt="Toco Speciality logo" width={749} height={749} className="h-11 w-11 shrink-0 sm:h-12 sm:w-12" /><span className="font-display text-xl uppercase leading-none sm:text-2xl">Toco Speciality</span></a>
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
             {navItems.map((item) => <a key={item.label} href={item.href} className="text-sm font-semibold transition-opacity hover:opacity-60">{item.label}</a>)}
-            <Button asChild variant="editorial" className="border-primary-foreground bg-primary-foreground text-primary hover:bg-primary-foreground/85"><a href="#visit">Find us</a></Button>
+            <Button asChild variant="editorial" className="border-cream bg-cream text-foreground hover:bg-light"><a href="#visit">Find us</a></Button>
           </nav>
           <Sheet>
             <SheetTrigger asChild><Button size="icon" variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/15 hover:text-primary-foreground lg:hidden" aria-label="Open menu"><Menu /></Button></SheetTrigger>
@@ -63,7 +63,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="story" className="grid min-h-[72svh] items-center gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-12 lg:py-32">
+      <section id="story" className="grid min-h-[72svh] items-center gap-12 bg-cream px-5 py-24 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:px-12 lg:py-32">
         <div>
           <p className="mb-8 text-xs font-bold uppercase tracking-widest">Made with intention</p>
           <h2 className="display-type max-w-4xl text-[clamp(3.4rem,8vw,8rem)]">A quiet ritual.<br />A bold cup.</h2>
@@ -75,8 +75,8 @@ function Index() {
         </div>
       </section>
 
-      <section id="menu" className="bg-primary px-5 py-20 text-primary-foreground sm:px-8 lg:px-12 lg:py-28">
-        <div className="mb-12 flex items-end justify-between gap-6 border-b border-primary-foreground/25 pb-6">
+      <section id="menu" className="bg-light px-5 py-20 text-foreground sm:px-8 lg:px-12 lg:py-28">
+        <div className="mb-12 flex items-end justify-between gap-6 border-b border-foreground/25 pb-6">
           <h2 className="display-type text-[clamp(3.8rem,9vw,9rem)]">The Toco table</h2>
           <span className="hidden text-sm uppercase sm:block">All day · Every day</span>
         </div>
@@ -91,7 +91,7 @@ function Index() {
       <section className="grid bg-secondary lg:grid-cols-2">
         <div className="flex min-h-[600px] flex-col justify-between p-5 py-20 sm:p-10 lg:p-12 lg:py-24">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest">House ritual / 01</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-accent">House ritual / 01</span>
             <h2 className="display-type mt-8 text-[clamp(4rem,8vw,8.5rem)]">Pour.<br />Pause.<br />Repeat.</h2>
           </div>
           <div className="mt-16 max-w-xl">
@@ -106,7 +106,7 @@ function Index() {
         <div className="image-zoom min-h-[540px] lg:order-1"><img src={pastriesImage} alt="Freshly baked pastries at the Toco counter" width={1408} height={1104} loading="lazy" className="h-full w-full object-cover" /></div>
         <div className="flex min-h-[540px] flex-col justify-between p-5 py-20 sm:p-10 lg:order-2 lg:p-12 lg:py-24">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest">Baked here / 02</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-accent">Baked here / 02</span>
             <h2 className="display-type mt-8 text-[clamp(4rem,8vw,8.5rem)]">Good things,<br />still warm.</h2>
           </div>
           <p className="mt-16 max-w-xl text-xl leading-relaxed">Our counter changes with the morning: laminated pastries, soft buns, and a few unexpected flavours from the region.</p>
@@ -126,12 +126,12 @@ function Index() {
         </div>
       </section>
 
-      <section id="visit" className="bg-background px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+      <section id="visit" className="bg-cream px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
         <h2 className="display-type text-center text-[clamp(4.5rem,12vw,12rem)]">Come by.</h2>
         <div className="mx-auto mt-16 grid max-w-6xl gap-px bg-border md:grid-cols-3">
-          <div className="bg-background p-8"><MapPin className="mb-8" /><p className="text-xs font-bold uppercase tracking-widest">Find us</p><p className="mt-3 text-lg">Addis Ababa, Ethiopia</p></div>
-          <div className="bg-background p-8"><Clock3 className="mb-8" /><p className="text-xs font-bold uppercase tracking-widest">Open daily</p><p className="mt-3 text-lg">7:00 AM — 11:00 PM</p></div>
-          <div className="bg-background p-8"><Instagram className="mb-8" /><p className="text-xs font-bold uppercase tracking-widest">Follow along</p><a href="https://instagram.com" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 text-lg font-semibold hover:underline">@tocospeciality <ArrowUpRight className="size-4" /></a></div>
+          <div className="bg-light p-8"><MapPin className="mb-8 text-accent" /><p className="text-xs font-bold uppercase tracking-widest">Find us</p><p className="mt-3 text-lg">Addis Ababa, Ethiopia</p></div>
+          <div className="bg-light p-8"><Clock3 className="mb-8 text-accent" /><p className="text-xs font-bold uppercase tracking-widest">Open daily</p><p className="mt-3 text-lg">7:00 AM — 11:00 PM</p></div>
+          <div className="bg-light p-8"><Instagram className="mb-8 text-accent" /><p className="text-xs font-bold uppercase tracking-widest">Follow along</p><a href="https://instagram.com" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 text-lg font-semibold transition-colors hover:text-accent">@tocospeciality <ArrowUpRight className="size-4" /></a></div>
         </div>
       </section>
 
