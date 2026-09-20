@@ -30,6 +30,16 @@ const navItems = [
   { label: "Visit", href: "#visit" },
 ];
 
+function HeroLine({ text, offset = 0 }: { text: string; offset?: number }) {
+  return (
+    <span className="block" aria-hidden="true">
+      {text.split("").map((char, i) => (
+        <span key={i} className="hero-char" style={{ animationDelay: `${(offset + i) * 42}ms` }}>{char === " " ? "\u00A0" : char}</span>
+      ))}
+    </span>
+  );
+}
+
 function Index() {
   return (
     <main className="overflow-hidden bg-background text-foreground">
