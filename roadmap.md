@@ -1,0 +1,3 @@
+- [ ] Build the Toco Speciality home page from the approved plan.
+- [ ] Keep the implementation in React with Vite.
+- [ ] Validate desktop and mobile presentation and interactions.
