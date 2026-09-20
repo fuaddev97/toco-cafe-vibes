@@ -32,7 +32,7 @@ const navItems = [
 
 function HeroLine({ text, offset = 0 }: { text: string; offset?: number }) {
   return (
-    <span className="block" aria-hidden="true">
+    <span className="block whitespace-nowrap" aria-hidden="true">
       {text.split("").map((char, i) => (
         <span key={i} className="hero-char" style={{ animationDelay: `${(offset + i) * 42}ms` }}>{char === " " ? "\u00A0" : char}</span>
       ))}
