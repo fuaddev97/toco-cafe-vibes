@@ -128,7 +128,7 @@ function Index() {
       <section id="visit" className="bg-background px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
         <h2 className="display-type text-center text-[clamp(4.5rem,12vw,12rem)]">Come by.</h2>
         <div className="mx-auto mt-16 grid max-w-6xl gap-px bg-border md:grid-cols-3">
-          <div className="bg-background p-8"><MapPin className="mb-8" /><p className="text-xs font-bold uppercase tracking-widest">Find us</p><p className="mt-3 text-lg">Riyadh, Saudi Arabia</p></div>
+          <div className="bg-background p-8"><MapPin className="mb-8" /><p className="text-xs font-bold uppercase tracking-widest">Find us</p><p className="mt-3 text-lg">Addis Ababa, Ethiopia</p></div>
           <div className="bg-background p-8"><Clock3 className="mb-8" /><p className="text-xs font-bold uppercase tracking-widest">Open daily</p><p className="mt-3 text-lg">7:00 AM — 11:00 PM</p></div>
           <div className="bg-background p-8"><Instagram className="mb-8" /><p className="text-xs font-bold uppercase tracking-widest">Follow along</p><a href="https://instagram.com" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 text-lg font-semibold hover:underline">@tocospeciality <ArrowUpRight className="size-4" /></a></div>
         </div>
@@ -139,7 +139,7 @@ function Index() {
           <div className="flex items-center gap-5"><img src={logoAsset.url} alt="Toco Speciality logo" width={750} height={750} loading="lazy" className="h-20 w-20 object-cover mix-blend-screen" /><p className="display-type text-4xl sm:text-6xl">Toco Speciality</p></div>
           <a href="#top" className="flex items-center gap-2 text-sm font-bold uppercase">Back to top <ArrowDown className="rotate-180" /></a>
         </div>
-        <div className="flex flex-col gap-2 pt-6 text-xs uppercase text-primary-foreground/60 sm:flex-row sm:justify-between"><span>© 2026 Toco Speciality</span><span>Coffee · Food · Riyadh</span></div>
+        <div className="flex flex-col gap-2 pt-6 text-xs uppercase text-primary-foreground/60 sm:flex-row sm:justify-between"><span>© 2026 Toco Speciality</span><span>COFFEE · FOOD · ADDIS ABABA</span></div>
       </footer>
     </main>
   );
