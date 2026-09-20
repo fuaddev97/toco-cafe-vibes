@@ -53,7 +53,7 @@ function Index() {
         </header>
 
         <div id="top" className="relative z-10 flex min-h-[calc(92svh-73px)] flex-col justify-end px-5 pb-8 pt-24 sm:px-8 lg:px-12 lg:pb-10">
-          <p className="reveal-up mb-5 text-xs font-bold uppercase tracking-widest">Speciality coffee · Riyadh</p>
+          <p className="reveal-up mb-5 text-xs font-bold uppercase tracking-widest">SPECIALITY COFFEE · ADDIS ABABA</p>
           <h1 className="display-type reveal-up max-w-[1400px] text-[clamp(3.25rem,13vw,12rem)]">Coffee,<br />considered.</h1>
           <div className="mt-7 grid gap-6 border-t border-primary-foreground/35 pt-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <p className="max-w-xl text-base leading-relaxed sm:text-xl">Coffee with clarity. Food with character. A place made for mornings that turn into afternoons.</p>
