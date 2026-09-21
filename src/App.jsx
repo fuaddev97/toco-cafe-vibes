@@ -66,11 +66,13 @@ function App() {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
+          setTimeout(()=> {
+            entry.target.classList.add("is-visible");
           observer.unobserve(entry.target);
+          }, 250)
         });
       },
-      { rootMargin: "0px", threshold: 0.25 },
+      { rootMargin: "0px", threshold: 0.05 },
     );
 
     sections.forEach((section) => observer.observe(section));
