@@ -584,7 +584,9 @@ svg {
   height: 3rem;
   line-height: 1;
 }
-
+.bold {
+  font-weight: 900;
+}
 .visit-detail,
 .instagram-link {
   font-size: 1.05rem;

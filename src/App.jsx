@@ -5,6 +5,9 @@ import heroImage from "./assets/toco-hero.jpg";
 import tableImage from "./assets/toco-table.jpg";
 import coffeeImage from "./assets/toco-coffee.jpg";
 import pastriesImage from "./assets/toco-pastries.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLocationCrosshairs } from '@fortawesome/free-solid-svg-icons';
 
 const navItems = [
   { label: "Menu", href: "#menu" },
@@ -166,9 +169,9 @@ function App() {
       <section className="visit-section" id="visit">
         <h2 className="display-type visit-heading">Come by.</h2>
         <div className="visit-grid">
-          <div className="visit-card"><span className="visit-icon" aria-hidden="true">⌖</span><p className="eyebrow">Find us</p><p className="visit-detail">Addis Ababa, Ethiopia</p></div>
-          <div className="visit-card"><span className="visit-icon" aria-hidden="true">◷</span><p className="eyebrow">Open daily</p><p className="visit-detail">7:00 AM — 11:00 PM</p></div>
-          <div className="visit-card"><span className="visit-icon" aria-hidden="true">◎</span><p className="eyebrow">Follow along</p><a className="instagram-link" href="https://instagram.com" target="_blank" rel="noreferrer">@tocospeciality <ArrowUpRight /></a></div>
+          <div className="visit-card"><span className="visit-icon" aria-hidden="true"><FontAwesomeIcon icon={faLocationCrosshairs} /></span><p className="eyebrow">Find us</p><p className="visit-detail">Addis Ababa, Ethiopia</p></div>
+          <div className="visit-card"><span className="visit-icon bold" aria-hidden="true">◷</span><p className="eyebrow">Open daily</p><p className="visit-detail">7:00 AM — 11:00 PM</p></div>
+          <div className="visit-card"><span className="visit-icon" aria-hidden="true"><FontAwesomeIcon icon={faInstagram} className="text-pink-600 w-8 h-8" /></span><p className="eyebrow">Follow along</p><a className="instagram-link" href="https://instagram.com" target="_blank" rel="noreferrer">@tocospeciality <ArrowUpRight /></a></div>
         </div>
       </section>
 
