@@ -2,3 +2,4 @@
 - [x] Keep the implementation in React with Vite.
 - [x] Validate desktop and mobile presentation and interactions.
 - [x] Refine the palette and visual mood without changing the existing design.
+- [x] Add one-time scroll-triggered entrance animations to the home-page sections.
