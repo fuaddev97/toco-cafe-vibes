@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logoLight from "./assets/toco-logo-light.png";
 import logoDark from "./assets/toco-logo-dark.png";
 import heroImage from "./assets/toco-hero.jpg";
@@ -51,6 +51,35 @@ function HeroLine({ text, offset = 0 }) {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    const sections = Array.from(document.querySelectorAll("[data-reveal]"));
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      sections.forEach((section) => section.classList.add("is-visible"));
+      return undefined;
+    }
+
+    document.documentElement.classList.add("reveal-ready");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px 14% 0px", threshold: 0.05 },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      observer.disconnect();
+      document.documentElement.classList.remove("reveal-ready");
+    };
+  }, []);
 
   return (
     <main className="site">
@@ -107,7 +136,7 @@ function App() {
         </div>
       </section>
 
-      <section className="story-section" id="story">
+      <section className="story-section" id="story" data-reveal>
         <div>
           <p className="eyebrow story-eyebrow">Made with intention</p>
           <h2 className="display-type story-heading">A quiet ritual.<br />A bold cup.</h2>
@@ -119,7 +148,7 @@ function App() {
         </div>
       </section>
 
-      <section className="menu-section" id="menu">
+      <section className="menu-section" id="menu" data-reveal>
         <div className="section-title-row">
           <h2 className="display-type menu-heading">The Toco table</h2>
           <span>All day · Every day</span>
@@ -130,7 +159,7 @@ function App() {
         </div>
       </section>
 
-      <section className="feature-section feature-coffee">
+      <section className="feature-section feature-coffee" data-reveal>
         <div className="feature-copy">
           <div>
             <span className="eyebrow accent-text">House ritual / 01</span>
@@ -144,7 +173,7 @@ function App() {
         <div className="image-frame feature-image"><img src={coffeeImage} alt="Latte art being poured by a Toco barista" width="1200" height="1504" loading="lazy" /></div>
       </section>
 
-      <section className="feature-section feature-pastries">
+      <section className="feature-section feature-pastries" data-reveal>
         <div className="image-frame feature-image pastry-image"><img src={pastriesImage} alt="Freshly baked pastries at the Toco counter" width="1408" height="1104" loading="lazy" /></div>
         <div className="feature-copy">
           <div>
@@ -155,7 +184,7 @@ function App() {
         </div>
       </section>
 
-      <section className="journal-section" id="journal">
+      <section className="journal-section" id="journal" data-reveal>
         <div>
           <p className="eyebrow journal-eyebrow">Now at Toco</p>
           <h2 className="display-type journal-heading">Long<br />weekends.</h2>
@@ -166,7 +195,7 @@ function App() {
         </div>
       </section>
 
-      <section className="visit-section" id="visit">
+      <section className="visit-section" id="visit" data-reveal>
         <h2 className="display-type visit-heading">Come by.</h2>
         <div className="visit-grid">
           <div className="visit-card"><span className="visit-icon" aria-hidden="true"><FontAwesomeIcon icon={faLocationCrosshairs} /></span><p className="eyebrow">Find us</p><p className="visit-detail">Addis Ababa, Ethiopia</p></div>
@@ -175,7 +204,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="site-footer">
+      <footer className="site-footer" data-reveal>
         <div className="footer-main">
           <div className="footer-brand"><img src={logoLight} alt="Toco Speciality logo" width="749" height="749" loading="lazy" /><p className="display-type">Toco Speciality</p></div>
           <a className="back-to-top" href="#top">Back to top <ArrowDown /></a>
