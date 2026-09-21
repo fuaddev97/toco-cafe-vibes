@@ -70,7 +70,7 @@ function App() {
           observer.unobserve(entry.target);
         });
       },
-      { rootMargin: "0px 0px 14% 0px", threshold: 0.25 },
+      { rootMargin: "0px", threshold: 0.25 },
     );
 
     sections.forEach((section) => observer.observe(section));
